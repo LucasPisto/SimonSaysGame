@@ -1,0 +1,233 @@
+.game-development {
+  margin: 0;
+  padding: 0;
+  background-color: #1e293b;
+  height: 100vh;
+}
+
+/* HEADER */
+.game-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-bottom: 3px;
+  z-index: 1000;
+}
+
+.game-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #b8b8b8;
+  padding: 10px 0;
+  background-color: #001a2c;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.creator {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: rgb(221, 219, 255);
+  margin: 0;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  padding-top: 75px;
+  height: calc(100vh - 75px);
+  overflow: hidden;
+}
+
+/* DIFFICULTY BUTTONS */
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.difficulty-buttons button {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.difficulty-buttons button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+.difficulty-buttons button:active {
+  background-color: #2980b9;
+  transform: scale(0.95);
+}
+
+.difficulty-buttons button.active {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+/* GAME CONTAINER */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BOTONES DE COLORES */
+.button-row {
+  display: flex;
+  margin: 0.2rem 0;
+}
+
+/* BOTONES COLOREADOS */
+.green-btn {
+  background-color: #22c55e;
+}
+
+.red-btn {
+  background-color: #ef4444;
+}
+
+.yellow-btn {
+  background-color: #facc15;
+}
+
+.blue-btn {
+  background-color: #3b82f6;
+}
+
+/* ESTILO DE BORDES */
+.green-border {
+  border-radius: 100% 0 0 0;
+}
+
+.red-border {
+  border-radius: 0 100% 0 0;
+}
+
+.yellow-border {
+  border-radius: 0 0 0 100%;
+}
+
+.blue-border {
+  border-radius: 0 0 100% 0;
+}
+
+/* BOTONES GENERALES */
+.game-button {
+  width: 155px;
+  height: 155px;
+  margin: 0.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.game-button:hover {
+  transform: scale(1.05);
+}
+
+.brightness-enhanced {
+  filter: brightness(2.5);
+}
+
+.opacity-reduced {
+  opacity: 0.7;
+}
+
+/* BOTÓN DE JUGAR */
+.play-button {
+  position: absolute;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-button:hover {
+  transform: scale(1.05);
+}
+
+/* BOTÓN DE REINICIAR */
+.reset-button {
+  background-color: #8d0e00;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+}
+
+.reset-button:active {
+  background-color: #a93226;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+/* MENSAJE DE ERROR */
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #181717;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #ecf0f1;
+}
+
+.error-message {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 335px) {
+  .game-header h1 {
+    font-size: 25px;
+  }
+
+  .game-button {
+    width: 120px;
+    height: 120px;
+  }
+
+  .difficulty-buttons button {
+    padding: 0.75rem 1.0rem;
+    margin-bottom: -15px;
+  }
+}
